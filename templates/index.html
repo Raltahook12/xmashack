@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Главная</title>
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Добро пожаловать!</h1>
+        <p>Выберите режим:</p>
+        <!-- Кнопки переключения секций -->
+        <button id="toggle-train" class="btn">Обучение</button>
+        <button id="toggle-predict" class="btn">Прогнозирование</button>
+        <div class="sections-container">
+            <!-- Секция для обучения -->
+            <div id="train-section" class="section hidden">
+                <h2>Обучение</h2>
+                <form id="train-form" enctype="multipart/form-data">
+                    <label for="train-file">Загрузите файл для обучения:</label>
+                    <input type="file" id="train-file" name="file" required>
+                    <button type="submit" class="btn">Загрузить</button>
+                </form>
+            </div>
+
+            <!-- Секция для прогнозирования -->
+            <div id="predict-section" class="section hidden">
+                <h2>Прогнозирование</h2>
+                <form id="predict-form" enctype="multipart/form-data">
+                    <label for="predict-file">Загрузите файл для предсказания:</label>
+                    <input type="file" id="predict-file" name="file" required>
+                    <label for="download">Скачать обработанный файл?</label>
+                    <input type="checkbox" id="download" name="download">
+                    <button type="submit" class="btn">Загрузить</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
